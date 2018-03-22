@@ -1,8 +1,11 @@
 {
   "name": "to-uuid",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "format string to uuid format: 00000000-0000-0000-0000-000000000000",
   "main": "build/index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc",
