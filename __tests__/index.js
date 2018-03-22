@@ -1,4 +1,4 @@
-const { toUUID } = require('../build/index');
+const toUUID = require('../build/index').toUUID;
 
 const parts = ['01234567', '0123', '0123', '0123', '0123456789ab'];
 
