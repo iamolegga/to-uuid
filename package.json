@@ -1,11 +1,12 @@
 {
   "name": "to-uuid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "format string to uuid format: 00000000-0000-0000-0000-000000000000",
   "main": "build/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "report": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/iamolegga/to-uuid#readme",
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "typescript": "^2.7.2"
   },
