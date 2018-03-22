@@ -1,0 +1,33 @@
+{
+  "name": "to-uuid",
+  "version": "0.1.0",
+  "description": "format string to uuid format: 00000000-0000-0000-0000-000000000000",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamolegga/to-uuid.git"
+  },
+  "keywords": [
+    "string",
+    "format",
+    "uuid"
+  ],
+  "author": "Oleg Repin <iamolegga@gmail.com> (http://github.com/iamolegga)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamolegga/to-uuid/issues"
+  },
+  "homepage": "https://github.com/iamolegga/to-uuid#readme",
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true
+  }
+}
