@@ -5,15 +5,20 @@ cache:
 notifications:
   email: false
 node_js:
-  - "4"
+- '4'
+deploy:
+  on:
+    tags: true
+    branch: master
+  provider: npm
+  email: iamolegga@gmail.com
+  api_key:
+    secure: cBFztXetPJjWUovvHnhV6bo7fVPvmUhWPAoRsgVTUAuJohFWsuaPa52f6k93otqJXEiLehwp2xRK+dXwYUp+kIatRG2V9jUWkhpA8ihURpB3qxojAJW0taTvRn7gUIIQsOvsN5/iwQznN7xXxZImwzeFiqv7MVnDHDNH8tIoQrFy8w6OrXiz5iIb5thz3zdD4CxEyUavGMQRnusrcIlhGJTan6p8+EBHhiB22xNHelv7eXmitQfN1PHbckD1xuU72LlQZTyUGuBtW5GmVTQnTqaZqRUVgPQbHqB8wUd5NN2wrAjVPGAStlbFBXKY/u/emn4rFWMAPWe4DYWygBGvbsh06QmkokEkrl7/7JvKnWkT0W9JYvkmXwVaiv8O36LBWrle7oMDvYNp0KeT/Yot/DZVDYGb7LDOpPCA1PZHsFvbLqWhkXmDK42HcHAC9Uh2c4yF+AnQkIB9DfjAjkHxYlROyxVCARXHWlkPDYgcYZcM83K8O/MuIm3fXmPWc4V6o5Ke7+aFjq+qsNXvf7U4a8yKw1l7btiNrcDETwFeuVRnhI2EpjcOzRbStLhMlIOW2J2Nu+284/qN1sm2HcrdQJiAiaAyIwSCY/bDZUwBhmC/dOVT6pTSfTmqRIBGg428fcctW+PzjM7hP5qdUNWZdT5zxKt0b+pCpTt4hDgBfbA=
 script:
-- npm run build
-- npm run test
-- |
-  if [[ ( "$TRAVIS_BRANCH" == "master" ) && ( "$TRAVIS_PULL_REQUEST" == "false" ) ]]; then
-    npm publish;
-    npm run report;
-  fi
+  - npm run build
+  - npm run test
+after_deploy:
+  - npm run report
 branches:
   except:
-  - /^v\d+\.\d+\.\d+$/
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
