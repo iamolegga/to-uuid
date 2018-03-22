@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "format string to uuid format: 00000000-0000-0000-0000-000000000000",
   "main": "build/index.js",
+ "types" : "build/index.d.ts",
   "engines": {
     "node": ">=4.0.0"
   },
